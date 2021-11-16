@@ -20,6 +20,7 @@ class CreateWisatasTable extends Migration
             $table->integer("User_id");
             $table->string("Foto")->nullable();
             $table->text("Lokasi")->nullable();
+            $table->text("Kontak")->nullable();
             $table->timestamps();
         });
     }

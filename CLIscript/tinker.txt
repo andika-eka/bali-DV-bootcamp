@@ -11,8 +11,9 @@ $reviews = $wisata->review
 $ratings = $wisata->rating
 
 $rating = new App\Models\Rating
-$rating->Wisata_id = 3
+$rating->Wisata_id = 2
 $rating->Hasil_Rating= 3
+$rating->User_id = 1
 $rating->save()
 
 $rating = App\Models\Rating::find(1)
@@ -22,6 +23,7 @@ $wisata = $rating->wisata
 $review = new App\Models\Review
 $review->Wisata_id =2
 $review->Hasil_Review= "good"
+$review->User_id = 1
 $review->save()
 
 $review = App\Models\review::find(1)

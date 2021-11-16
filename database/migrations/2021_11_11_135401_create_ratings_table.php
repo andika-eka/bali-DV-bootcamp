@@ -17,6 +17,7 @@ class CreateRatingsTable extends Migration
             $table->id("Id_Rating");
             $table->integer("Wisata_id");
             $table->decimal("Hasil_Rating", $precision = 3, $scale = 2);
+            $table->integer("User_id");
             $table->timestamps();
         });
     }

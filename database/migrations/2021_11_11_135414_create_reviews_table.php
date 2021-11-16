@@ -17,6 +17,7 @@ class CreateReviewsTable extends Migration
             $table->id("Id_review");
             $table->integer("Wisata_id");
             $table->text("Hasil_Review");
+            $table->integer("User_id");
             $table->timestamps();
         });
     }
