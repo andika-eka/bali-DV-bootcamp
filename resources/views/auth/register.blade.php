@@ -1,18 +1,23 @@
 @extends('auth.layouts')
 
-@section('content')
-<main class="signup-form">
-    <div class="cotainer">
-        <div class="row justify-content-center">
-            <div class="col-md-4">
-                <div class="card">
-                    <h3 class="card-header text-center" style="background-color: #20c997" >Register User</h3>
-                    <div class="card-body">
+@section('title')
+    Register
+@endsection
 
-                        <form action="#" method="POST">
+@section('content')
+<nav class="navbar navbar-light navbar-expand-lg mb-5"></nav>
+    <main class="login-form" >
+        <div class="container" >
+            <div class="row justify-content-center">
+                <div class="col-md-4">
+                    <div class="card rounded">
+                        <div class="card-header bg-primary" style="background-color: #0996ce"></div>
+                        <h5 class="mt-3 text-center">Buat Akun</h5>
+                        <div class="card-body">
+                            <form action="{{ route('register.custom') }}" method="POST">
                             @csrf
                             <div class="form-group mb-3">
-                                <input type="text" placeholder="Name" id="name" class="form-control" name="name"
+                                <input type="text" placeholder="Nama" id="name" class="form-control" name="name"
                                     required autofocus>
                                 @if ($errors->has('name'))
                                     <span class="text-danger">{{ $errors->first('name') }}</span>
@@ -33,28 +38,23 @@
                                 @if ($errors->has('password'))
                                     <span class="text-danger">{{ $errors->first('password') }}</span>
                                 @endif
-                            </div>
+                            </div>                                                
 
-                            <div class="form-group mb-3">
-                                <input type="password" placeholder="Konfirmasi Password" id="confirmPassword" class="form-control"
-                                    name="confirmPassword" required>                                
-                            </div>
-
-                            <div class="form-group mb-3">
-                                <div class="checkbox">
-                                    <label><input type="checkbox" name="remember"> Remember me</label>
-                                </div>
-                            </div>
-
-                            <div class="d-grid mx-auto">
-                                <button type="submit" class="btn btn-dark btn-block">Sign Up</button>
+                            <div class="d-grid gap-2 col-6 mx-auto mb-3">                
+                                    <button type="submit" class="btn btn-primary btn-block ">Registrasi</button>                                  
                             </div>
                         </form>
 
-                    </div>
+                            @if(session()->has('message'))
+                                <div class="alert alert-success mt-2">
+                                    {{ session()->get('message') }}
+                                </div>
+                            @endif
+
+                        </div>
+                    </div>                    
                 </div>
             </div>
         </div>
-    </div>
-</main>
+    </main>
 @endsection

@@ -14,6 +14,10 @@ use App\Http\Controllers\AuthController;
 |
 */
 
-Route::get('/login', [AuthController::class, 'login'])->name('login'); 
-Route::get('/register', [AuthController::class, 'register'])->name('register'); 
-Route::get('/dummy', [AuthController::class, 'dummy'])->name('dummy'); 
+//route dashboard pakek ngetes
+Route::get('/dashboard', [AuthController::class, 'dashboard'])->name('dashboard');
+Route::get('/login', [AuthController::class, 'login'])->name('login.view');
+Route::post('/custom-login', [AuthController::class, 'customLogin'])->name('login.custom'); 
+Route::get('/register', [AuthController::class, 'register'])->name('register.view'); 
+Route::post('/register-login', [AuthController::class, 'customRegister'])->name('register.custom'); 
+Route::get('/logout', [AuthController::class, 'logOut'])->name('logout');

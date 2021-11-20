@@ -1,5 +1,9 @@
 @extends('auth.layouts')
 
+@section('title')
+    Login
+@endsection
+
 @section('content')
 
 <nav class="navbar navbar-light navbar-expand-lg mb-5"></nav>
@@ -7,10 +11,11 @@
         <div class="container" >
             <div class="row justify-content-center">
                 <div class="col-md-4">
-                    <div class="card rounded border-dark">
+                    <div class="card rounded">
+                        <div class="card-header bg-primary" style="background-color: #0996ce"></div>
                         <h5 class="mt-3 text-center">Masuk Ke Akun Anda</h5>
                         <div class="card-body">
-                            <form method="POST" action="#">
+                            <form method="POST" action="{{ route('login.custom')}}">
                                 @csrf
                                 <div class="form-group mb-3">
                                     <input type="text" placeholder="Username" id="email" class="form-control" name="email" required
@@ -45,7 +50,7 @@
                         </div>
                     </div>
                     <div class="col mt-1">
-                        <div class="text-center"> belum daftar? <a href="#"> Daftar Sekarang </a></div>                                                     
+                        <div class="text-center"> Belum Daftar? <a href="{{ route('register.view') }}"> Daftar Sekarang </a></div>                                                     
                     </div>
                 </div>
             </div>

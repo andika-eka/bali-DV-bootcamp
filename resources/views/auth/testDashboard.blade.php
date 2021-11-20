@@ -4,12 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>@yield('title')</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Document</title>
 </head>
 <body>
 
-    @yield('content')
+    <li class="nav-item">
+        <a class="nav-link" href="{{ route('logout') }}">Logout</a>
+    </li>
 
+    Selamat anda telah login
+
+    
+    
 </body>
 </html>
