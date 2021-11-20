@@ -17,4 +17,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::resource('Wisata', WisataController::class);
+Route::resource('dashboard', WisataController::class);

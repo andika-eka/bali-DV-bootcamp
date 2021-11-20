@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Rating extends Model
 {
-    protected $fillable = ['Id_Rating', "Wisata_id", "Hasil_Rating"];
+    protected $fillable = ['Id_Rating', "Wisata_id", "User_id", "Hasil_Rating"];
     protected $primaryKey = 'Id_Rating';
     use HasFactory;
     
