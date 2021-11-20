@@ -16,8 +16,8 @@ class WisataController extends Controller
      */
     public function index()
     {
-        $data = Wisata::all();
-        //$data = Wisata::where('User_id','=',Auth::id())->get();
+        // $data = Wisata::all();
+        $data = Wisata::where('User_id','=',Auth::id())->get();
         return view('dashboard.index')
         ->with("data", $data);
     }
