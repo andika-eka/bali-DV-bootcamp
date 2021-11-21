@@ -9,6 +9,7 @@ $wisata->delete()
 
 $reviews = $wisata->review
 $ratings = $wisata->rating
+$user = $wisata->user
 
 $rating = new App\Models\Rating
 $rating->Wisata_id = 2
