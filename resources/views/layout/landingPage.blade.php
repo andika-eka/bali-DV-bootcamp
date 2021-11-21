@@ -28,7 +28,7 @@
                         <!-- <li class="menu-item"><a href="#" class="menu-link">About us</a></li>
                         <li class="menu-item"><a href="#" class="menu-link">Contact</a></li> -->
                     </ul>
-                    <a href="#" class="btn-member">Login</a>
+                    <a href="/login" class="btn-member">Login</a>
                 </div>
                 <div class="menu-toggle bx bxs-grid-alt">
                 </div>
@@ -318,7 +318,7 @@
                 <!-- <p class="disc">UP TO 20%</p> -->
             </div>
             <div class="btn-banner2">
-                <a href="#" class="btn-regis">Register</a>
+                <a href="register" class="btn-regis">Register</a>
             </div>
         </div>
     </section>
