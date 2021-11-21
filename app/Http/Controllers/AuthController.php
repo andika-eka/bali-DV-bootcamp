@@ -23,8 +23,14 @@ class AuthController extends Controller
 
     public function dashboard(){
 
-        return view('auth.testDashboard');
-
+        if(Auth::check()){        
+            //check apakah user id di todo sama dengan user id yang login    
+            $user = Auth::user();                                                                                                                                             
+            return view('auth.testDashboard', ['user' => $user,                                    
+                                    ]);
+        }
+  
+        return redirect("/login")->withSuccess('Anda Belum Login Silahkan Login Terlebih dahulu');
     }
 
     public function customLogin(Request $request)
@@ -45,6 +51,13 @@ class AuthController extends Controller
 
     public function customRegister(Request $request)
     {  
+        $confirm = $request->confirmPass;
+                
+        if ($request->password != $confirm){
+
+            return redirect("/register")->with('message', 'Konfirmasi Password Tidak Sesuai');
+            
+        }
         $request->validate([
             'name' => 'required',
             'email' => 'required|email|unique:users',
@@ -54,7 +67,7 @@ class AuthController extends Controller
         $data = $request->all();            
         $check = $this->create($data);
          
-        return redirect("dashboard")->with('message', 'Anda Telah Login');
+        return redirect("/login")->with('message', 'Anda Telah Register Silahkan Login');
     }
 
     public function create(array $data)

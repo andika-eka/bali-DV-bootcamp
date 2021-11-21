@@ -38,7 +38,12 @@
                                 @if ($errors->has('password'))
                                     <span class="text-danger">{{ $errors->first('password') }}</span>
                                 @endif
-                            </div>                                                
+                            </div>    
+                            
+                            <div class="form-group mb-3">
+                                <input type="password" placeholder="Konfirmasi Password" id="confirmPass" class="form-control"
+                                    name="confirmPass" required>                             
+                            </div> 
 
                             <div class="d-grid gap-2 col-6 mx-auto mb-3">                
                                     <button type="submit" class="btn btn-primary btn-block ">Registrasi</button>                                  
