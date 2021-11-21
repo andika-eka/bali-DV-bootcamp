@@ -13,6 +13,13 @@ use App\Http\Controllers\AuthController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/', function () {
+    return view('layout.landingPage');
+});
+
+Route::get('/konten', function () {
+    return view('layout.konten');
+});
 
 
 

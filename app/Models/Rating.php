@@ -16,4 +16,9 @@ class Rating extends Model
         return $this->belongsTo(Wisata::class, "Wisata_id", "Id_Wisata");
     }
 
+    public function user()
+    {
+        return $this->belongsTo(User::class, "User_id", "id");
+    }
+
 }
