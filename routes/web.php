@@ -17,6 +17,9 @@ Route::get('/', function () {
     return view('layout.landingPage');
 });
 
+Route::get('/konten', function () {
+    return view('layout.konten');
+});
 
 Route::get('/login', [AuthController::class, 'login'])->name('login'); 
 Route::get('/register', [AuthController::class, 'register'])->name('register'); 

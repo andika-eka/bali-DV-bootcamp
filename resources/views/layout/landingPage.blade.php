@@ -11,7 +11,7 @@
     <!-- AOS -->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
-    <title>Travel- Slicing</title>
+    <title>Bali Destination</title>
     <link rel="stylesheet" href="{{asset('css/style.css')}}">
 </head>
 
@@ -19,7 +19,7 @@
     <header>
         <nav class="navbar">
             <div class="container nav-wrapper">
-                <a href="#" class="logo">WE<span>Look</span></a>
+                <a href="#" class="logo">Digital <span>Destination</span></a>
                 <div class="menu-wrapper">
                     <ul class="menu">
                         <li class="menu-item"><a href="#" class="menu-link active">Home</a></li>
@@ -38,55 +38,15 @@
         <section class="home" id="home">
             <div class="container home-wrapper">
                 <div class="content-left" data-aos="fade-right">
-                    <h1 class="heading">Looking for favorite destination in bali with WE<span>look</span></h1>
+                    <h1 class="heading">Looking for favorite destination in bali with Digital<span>Destination</span></h1>
                     <p class="subheading">We have partners with several destinations that you
                         might feel at home there, we will guide you with our best service.</p>
-                    <!-- 
-                    <div class="box-wrapper">
-                        <div class="box">
-                            <i class='bx bxs-check-square'></i>
-                            <p>Plan your trip</p>
-                        </div>
-                        <div class="box">
-                            <i class='bx bxs-check-square'></i>
-                            <p>Fly with us</p>
-                        </div>
-                    </div>
-                    <div class="form-panel">
-                        <img src="{{asset ('img/form.png')}}" alt="">
-                        <div class="title-form">
-                            <p>Get the schedule</p>
-                        </div>
-                        <div class="form-location">
-                            <i class='bx bxs-map loc'></i>
-                            <div class="location">
-                                <p>Location <i class='bx bx-chevron-down'></i></p>
-                                <select>
-                                    <option value="">Jakarta, indonesia</option>
-                                    <option value="">Bali, indonesia</option>
-                                    <option value="">Yogyakarta, indonesia</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="form-date">
-                            <i class='bx bxs-calendar-alt cal'></i>
-                            <div class="date">
-                                <p>Date <i class='bx bx-chevron-down'></i></p>
-                                <input type="date">
-                            </div>
-                        </div>
-                        <div class="btn-search">
-                            <i class='bx bx-search'></i>
-                        </div>
-                    </div>
-                    <p class="sugestion">Popular search : Kuta beach, Raja Ampat Beach, Borobudur temple</p>
-                -->
+                    
                 </div>
                 <div class="content-right" data-aos="fade-left">
                     <div class="img-wrapper">
                         <img src="{{asset('img/hero-tavel.png')}}" alt="">
                     </div>
-
                 </div>
 
             </div>
@@ -280,7 +240,7 @@
                             <img src="assets/img/testi.png" alt="">
                             <div class="text-testi">
                                 <i class='bx bxs-quote-left'></i>
-                                <p>I am very helpful with this trouravel, because we
+                                <p>I am very helpful with this digital destination, because we
                                     can easily get it all without having to prepare
                                     it from afar, and also the price is affordable,
                                     highly recommended.</p>
@@ -293,7 +253,7 @@
                             <img src="assets/img/testi.png" alt="">
                             <div class="text-testi">
                                 <i class='bx bxs-quote-left'></i>
-                                <p>I am very helpful with this trouravel, because we
+                                <p>I am very helpful with this digital destination, because we
                                     can easily get it all without having to prepare
                                     it from afar, and also the price is affordable,
                                     highly recommended.</p>
@@ -306,7 +266,7 @@
                             <img src="assets/img/testi.png" alt="">
                             <div class="text-testi">
                                 <i class='bx bxs-quote-left'></i>
-                                <p>I am very helpful with this trouravel, because we
+                                <p>I am very helpful with this digital destination, because we
                                     can easily get it all without having to prepare
                                     it from afar, and also the price is affordable,
                                     highly recommended.</p>
@@ -319,7 +279,7 @@
                             <img src="{{asset('img/testi.png')}}" alt="">
                             <div class="text-testi">
                                 <i class='bx bxs-quote-left'></i>
-                                <p>I am very helpful with this trouravel, because we
+                                <p>I am very helpful with this digital destination, because we
                                     can easily get it all without having to prepare
                                     it from afar, and also the price is affordable,
                                     highly recommended.</p>
@@ -332,7 +292,7 @@
                             <img src="assets/img/testi.png" alt="">
                             <div class="text-testi">
                                 <i class='bx bxs-quote-left'></i>
-                                <p>I am very helpful with this trouravel, because we
+                                <p>I am very helpful with this digital destination, because we
                                     can easily get it all without having to prepare
                                     it from afar, and also the price is affordable,
                                     highly recommended.</p>
@@ -367,7 +327,7 @@
     <footer class="footer" id="footer">
         <div class="container footer-wrapper">
             <div class="col-1-footer">
-                <h1 class="logo-footer">WE<span>look</span></h1>
+                <h1 class="logo-footer">Digital<span>Destination</span></h1>
                 <p class="subheading-footer">The best service to customers is
                     our top priority in building a business</p>
                 <div class="sosmed-icon">
