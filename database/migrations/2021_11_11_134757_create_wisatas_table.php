@@ -16,6 +16,7 @@ class CreateWisatasTable extends Migration
         Schema::create('wisatas', function (Blueprint $table) {
             $table->id("Id_Wisata");
             $table->string("Nama_Wisata");
+            $table->string("Kategori");
             $table->text("Deskripsi")->nullable();
             $table->integer("User_id");
             $table->string("Foto")->nullable();

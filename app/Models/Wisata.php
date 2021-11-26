@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Wisata extends Model
 {
-    protected $fillable = ['Id_Wisata', "Nama_Wisata","Deskripsi", "User_id", "Foto", "Lokasi" ];
+    protected $fillable = ['Id_Wisata', "Kategori", "Nama_Wisata","Deskripsi", "User_id", "Foto", "Lokasi" ];
     protected $primaryKey = 'Id_Wisata';
     use HasFactory;
 
