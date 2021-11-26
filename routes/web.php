@@ -19,7 +19,7 @@ Route::get('/', function () {
 });
 
 Route::get('/konten', function () {
-    return view('layout.konten');
+    return view('layout.inputform');
 });
 
 //route dashboard pakek ngetes

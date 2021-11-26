@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Auth;
 use App\Models\Wisata;
 use Illuminate\Support\Facades\File;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class KontenController extends Controller
 {
@@ -37,7 +38,8 @@ class KontenController extends Controller
      */
     public function create()
     {
-        //
+        $title = 'Tambah Wisata';
+        return view('layout.inputform', compact('title'));
     }
 
     /**
@@ -89,9 +91,13 @@ class KontenController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit($Id_Wisata)
     {
-        //
+        // dd($Id_Wisata);
+        $data = Wisata::find($Id_Wisata);
+        $title = 'Edit Wisata';
+        // dd($data);
+        return view('layout.inputform', compact('title', 'data'));
     }
 
     /**
@@ -101,13 +107,13 @@ class KontenController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, $Id_Wisata)
     {
         $message = [
             'required' => 'kolom harus diisi',
             'numeric' => 'inputkan angka bos'
-            
         ];
+
         $validasi = $request->validate([
             'Nama_Wisata' => 'required',
             'Kategori' => 'required',
@@ -117,11 +123,17 @@ class KontenController extends Controller
             'Foto' => '' 
         ], $message);
         
+        if($request->hasFile('Foto')){
+            $fileName= time().$request->file('Foto')->getClientOriginalName();
+            $path = $request->file('Foto')->storeAs('cover', $fileName);
+            $validasi['Foto'] = $path;
+            $Wisata = Wisata::find($Id_Wisata);
+            // dd($Wisata);
+            Storage::delete($Wisata);
+        }
 
-        $path = $request->file('Foto')->store('cover');
         $validasi['User_id'] = Auth::id();
-        $validasi['Foto'] = $path;
-        Wisata::create($validasi);
+        Wisata::where('Id_Wisata', $Id_Wisata)->update($validasi);;
         return redirect('wisata');
     }
 
@@ -131,8 +143,15 @@ class KontenController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy($Id_Wisata)
     {
-        //
+        $data = Wisata::find($Id_Wisata);
+        if($data != null){
+            Storage::delete($data->Foto);
+            $data = Wisata::find($data->Id_Wisata);
+            Wisata::where('Id_Wisata', $Id_Wisata)->delete();
+        
+        }
+        return redirect('wisata');
     }
 }
