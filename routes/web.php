@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\KontenController;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\KomentarController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,13 +16,15 @@ use App\Http\Controllers\KontenController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/', function () {
-    return view('layout.landingPage');
-});
+// Route::get('/', function () {
+//     return view('layout.landingPage');
+// });
 
-Route::get('/konten', function () {
-    return view('layout.inputform');
-});
+Route::get('/', [HomeController::class, 'index']);
+
+// Route::get('/konten', function () {
+//     return view('layout.konten');
+// });
 
 //route dashboard pakek ngetes
 //Route::get('/dashboard', [AuthController::class, 'dashboard'])->name('dashboard');
@@ -31,3 +35,4 @@ Route::post('/register-login', [AuthController::class, 'customRegister'])->name(
 Route::get('/logout', [AuthController::class, 'logOut'])->name('logout');
 
 Route::resource('wisata', KontenController::class);
+Route::resource('komentar', KomentarController::class);

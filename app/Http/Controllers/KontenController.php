@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use Illuminate\Support\Facades\Auth;
 use App\Models\Wisata;
+use App\Models\Review;
 use Illuminate\Support\Facades\File;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
@@ -29,6 +30,7 @@ class KontenController extends Controller
             ]);
         }
         return redirect("/login")->withSuccess('Anda Belum Login Silahkan Login Terlebih dahulu');
+   
     }
 
     /**
@@ -80,9 +82,13 @@ class KontenController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($Id_Wisata)
     {
-        //
+        $komentar = Review::where('Wisata_id', $Id_Wisata)->get();
+        $jumlahKomen= $komentar->count();
+        
+        $data = Wisata::find($Id_Wisata);
+        return view('layout.konten', compact('data', 'komentar', 'jumlahKomen'));
     }
 
     /**

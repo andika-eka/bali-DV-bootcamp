@@ -62,7 +62,7 @@
       
        <div class="inputfield">
           <label>Deskripsi</label>
-          <textarea class="textarea" name = "Deskripsi" >{{$data->Deskripsi}}</textarea>
+          <textarea class="textarea" name = "Deskripsi" >{{(isset($data))?$data->Lokasi:old('Lokasi')}}</textarea>
        </div> 
 
 
