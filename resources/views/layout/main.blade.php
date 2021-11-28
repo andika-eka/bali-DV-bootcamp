@@ -35,23 +35,22 @@
                 </div>
             </div>
         </nav>
-
         <section class="home" id="home">
-            <div class="container home-wrapper">
-                <div class="content-left" data-aos="fade-right">
-                    <h1 class="heading">Looking for favorite destination in bali with Digital<span>Destination</span></h1>
-                    <p class="subheading">We have partners with several destinations that you
-                        might feel at home there, we will guide you with our best service.</p>
-                    
-                </div>
-                <div class="content-right" data-aos="fade-left">
-                    <div class="img-wrapper">
-                        <img src="{{asset('img/hero-travel1.png')}}" alt="">
+                    <div class="container home-wrapper">
+                        <div class="content-left" data-aos="fade-right">
+                            <h1 class="heading">Looking for favorite destination in bali with Digital<span>Destination</span></h1>
+                            <p class="subheading">We have partners with several destinations that you
+                                might feel at home there, we will guide you with our best service.</p>
+                            
+                        </div>
+                        <div class="content-right" data-aos="fade-left">
+                            <div class="img-wrapper">
+                                <img src="{{asset('img/hero-travel1.png')}}" alt="">
+                            </div>
+                        </div>
                     </div>
-                </div>
-
-            </div>
         </section>
+
     </header>
 
     <!-- Service Start -->

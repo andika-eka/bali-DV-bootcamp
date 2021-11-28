@@ -14,7 +14,7 @@ class HomeController extends Controller
     public function index()
     {
         $data = Wisata::all();
-        return view('layout.landingPage', compact('data'));
+        return view('layout.main', compact('data'));
     }
 
     /**
