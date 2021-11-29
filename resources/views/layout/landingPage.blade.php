@@ -106,6 +106,7 @@
     </section>
     <!-- Service End -->
 
+
     <!-- ini konten utama -->
     <!-- Produk start -->
     <section class="produk">
@@ -122,40 +123,44 @@
             </div>
             <div class="row2">
                 <!-- Swiper -->
+                <!-- ini main konten -->
                 <div class="swiper mySwiper">
                     <div class="swiper-wrapper">
+
+                    @foreach($data as $datas)
+                    <!-- mulai looping konten -->
                         <div class="swiper-slide card-produk">
-                            <img src="{{asset('img/produk.png')}}" alt="">
+                            <img src="{{ url('storage/'.$datas->Foto) }}" alt="" style = 'max-width: 400px; height:400px'>
                             <div class="detail-produk">
                                 <div class="kategori">
-                                    <p class="label-kategori">Beach</p>
+                                    <p class="label-kategori">{{$datas->Kategori}}</p>
 
 
                                 </div>
                                 <div class="title-card">
-                                    <h1>Nama tempat, Kabupaten</h1>
+                                    <h1>{{$datas->Nama_Wisata}}, {{$datas->Lokasi}}</h1>
                                 </div>
                                 <div class="review">
                                     <div class="star">
-                                        <i class='bx bxs-star'></i> 5.0
+                                        <i class='bx bxs-star'></i> 
                                     </div>
-                                    <p>1.6k reviewer</p>
+                                    <p></p>
                                 </div>
                                 <div class="body-card">
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta adipisci qui
-                                        nesciunt
-                                        totam
-                                        vel nihil id est corporis voluptatum sunt.</p>
+                                    <p>{{$datas->Deskripsi}}</p>
                                 </div>
                                 <div class="btn-produk">
-                                    <a href="#">Detail</a>
+                                    <a href="{{route('wisata.show', $datas->Id_Wisata)}}">Detail</a>
                                 </div>
                             </div>
                         </div>
-
+                    <!-- stop looping konten -->
+                    @endforeach
                     </div>
                 </div>
             </div>
+
+  
         </div>
     </section>
 

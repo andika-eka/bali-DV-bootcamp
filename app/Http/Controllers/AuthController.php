@@ -21,7 +21,15 @@ class AuthController extends Controller
         return view('auth.register');
     }
 
-    public function dashboard(){
+    // public function dashboard(){
+    //     if(Auth::check()){        
+    //         //check apakah user id di todo sama dengan user id yang login    
+    //         $user = Auth::user();                                                                                                                                             
+    //         return view('layout.dashboardPage', ['user' => $user,                                    
+    //         ]);
+    //     }
+  
+    //     return redirect("/login")->withSuccess('Anda Belum Login Silahkan Login Terlebih dahulu');
 
         if(Auth::check()){        
             //check apakah user id di todo sama dengan user id yang login    
@@ -42,7 +50,7 @@ class AuthController extends Controller
    
         $credentials = $request->only('email', 'password');
         if (Auth::attempt($credentials)) {
-            return redirect()->intended('dashboard')
+            return redirect()->intended('wisata')
                         ->withSuccess('Signed in');
         }
   
