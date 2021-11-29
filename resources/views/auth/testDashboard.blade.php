@@ -9,10 +9,13 @@
 <body>
 
     <li class="nav-item">
-        <a class="nav-link" href="{{ route('logout') }}">Logout</a>
+        <a class="nav-link" href="{{ route('logout') }}"> Logout </a>
     </li>
 
-    Selamat anda telah login
+    Selamat anda telah login 
+    ID: <b> {{ $user->id }} </b> 
+    <br>
+    Nama: <b> {{ $user->name }}</b>
 
     
     
