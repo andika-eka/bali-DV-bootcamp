@@ -24,7 +24,7 @@ class KontenController extends Controller
 
             $data = $user->wisata;
             //   dd($data);
-            return view('layout.dashboardPage', [
+            return view('user.dashboardPage', [
                 'data'=>$data,
                 'user'=>$user
             ]);
@@ -41,7 +41,7 @@ class KontenController extends Controller
     public function create()
     {
         $title = 'Tambah Wisata';
-        return view('layout.inputform', compact('title'));
+        return view('user.inputform', compact('title'));
     }
 
     /**
@@ -88,7 +88,7 @@ class KontenController extends Controller
         $jumlahKomen= $komentar->count();
         
         $data = Wisata::find($Id_Wisata);
-        return view('layout.konten', compact('data', 'komentar', 'jumlahKomen'));
+        return view('public.konten', compact('data', 'komentar', 'jumlahKomen'));
     }
 
     /**
@@ -103,7 +103,7 @@ class KontenController extends Controller
         $data = Wisata::find($Id_Wisata);
         $title = 'Edit Wisata';
         // dd($data);
-        return view('layout.inputform', compact('title', 'data'));
+        return view('user.inputform', compact('title', 'data'));
     }
 
     /**

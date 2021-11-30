@@ -16,10 +16,11 @@
 </head>
 
 <body>
+
     <header>
         <nav class="navbar">
             <div class="container nav-wrapper">
-                <a href="#" class="logo">Digital <span>Destination</span></a>
+                <a href="/" class="logo">Digital <span>Destination</span></a>
                 <div class="menu-wrapper">
                     <ul class="menu">
                         <li class="menu-item"><a href="#" class="menu-link active">Home</a></li>
@@ -34,23 +35,22 @@
                 </div>
             </div>
         </nav>
-
         <section class="home" id="home">
-            <div class="container home-wrapper">
-                <div class="content-left" data-aos="fade-right">
-                    <h1 class="heading">Looking for favorite destination in bali with Digital<span>Destination</span></h1>
-                    <p class="subheading">We have partners with several destinations that you
-                        might feel at home there, we will guide you with our best service.</p>
-                    
-                </div>
-                <div class="content-right" data-aos="fade-left">
-                    <div class="img-wrapper">
-                        <img src="{{asset('img/hero-tavel.png')}}" alt="">
+                    <div class="container home-wrapper">
+                        <div class="content-left" data-aos="fade-right">
+                            <h1 class="heading">Looking for favorite destination in bali with Digital<span>Destination</span></h1>
+                            <p class="subheading">We have partners with several destinations that you
+                                might feel at home there, we will guide you with our best service.</p>
+                            
+                        </div>
+                        <div class="content-right" data-aos="fade-left">
+                            <div class="img-wrapper">
+                                <img src="{{asset('img/hero-travel1.png')}}" alt="">
+                            </div>
+                        </div>
                     </div>
-                </div>
-
-            </div>
         </section>
+
     </header>
 
     <!-- Service Start -->
@@ -181,7 +181,7 @@
     <section class="statistik">
         <div class="container statistik-wrapper">
             <div class="content-img" data-aos="fade-right">
-                <img src="{{asset('img/statistik.png')}}" alt="">
+                <img src="{{asset('img/statistik1.png')}}" alt="">
             </div>
             <div class="content-statis" data-aos="fade-left">
                 <p class="label-statis">OUR PERFORMANCE</p>
