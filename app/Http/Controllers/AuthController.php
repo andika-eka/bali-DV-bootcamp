@@ -21,15 +21,7 @@ class AuthController extends Controller
         return view('auth.register');
     }
 
-    // public function dashboard(){
-    //     if(Auth::check()){        
-    //         //check apakah user id di todo sama dengan user id yang login    
-    //         $user = Auth::user();                                                                                                                                             
-    //         return view('layout.dashboardPage', ['user' => $user,                                    
-    //         ]);
-    //     }
-  
-    //     return redirect("/login")->withSuccess('Anda Belum Login Silahkan Login Terlebih dahulu');
+    public function dashboard(){
 
         if(Auth::check()){        
             //check apakah user id di todo sama dengan user id yang login    
