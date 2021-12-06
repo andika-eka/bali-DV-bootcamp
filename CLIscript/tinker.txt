@@ -1,0 +1,32 @@
+$wisata = new App\Models\Wisata
+$wisata ->Nama_Wisata = "tinker 1"
+$wisata ->deskripsi = "input from tinker"
+$wisata ->User_id = 1
+$wisata ->save()
+
+$wisata = App\Models\Wisata::find(2)
+$wisata->delete()
+
+$reviews = $wisata->review
+$ratings = $wisata->rating
+$user = $wisata->user
+
+$rating = new App\Models\Rating
+$rating->Wisata_id = 2
+$rating->Hasil_Rating= 3
+$rating->User_id = 1
+$rating->save()
+
+$rating = App\Models\Rating::find(1)
+$wisata = $rating->wisata
+
+
+$review = new App\Models\Review
+$review->Wisata_id =2
+$review->Hasil_Review= "good"
+$review->User_id = 1
+$review->save()
+
+$review = App\Models\review::find(1)
+$wisata = $review->wisata
+

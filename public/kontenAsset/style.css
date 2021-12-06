@@ -1,0 +1,351 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,800,700,600,300);
+body {
+    background: rgb(255, 255, 255);
+    margin: 50;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.wrap {
+    width: 1000px;
+    margin: 25px auto;
+}
+
+.sidebar {
+    float: right;
+    width: 275px;
+}
+
+.checked {
+    color: orange;
+}
+
+.sidebar .widget {
+    padding: 25px;
+    margin: 0 0 2px;
+    background: #fff;
+    border: 1px solid #dedede;
+    box-shadow: 1px 1px 1px 0px rgba(204, 204, 204, 0.35);
+    padding: 20px;
+    margin-top: 25px;
+    border-radius: 10px;
+}
+
+.sidebar .widget p {
+    font-size: 14px;
+}
+
+.sidebar .widget p:last-child {
+    margin: 0;
+}
+
+.blog {
+    float: left;
+}
+
+.conteudo {
+    width: 650px;
+    padding: 25px;
+    margin: 25px auto;
+    background: #fff;
+    border: 1px solid #dedede;
+    box-shadow: 1px 1px 1px 0px rgba(204, 204, 204, 0.35);
+    border-radius: 10px;
+}
+
+.conteudo img {
+    min-width: 650px;
+    margin: 0 0 25px -25px;
+    max-width: 650px;
+}
+
+.conteudo h1 {
+    padding: 0;
+    margin: 0 0 15px;
+    font-weight: normal;
+    color: #666;
+    font-family: Georgia;
+}
+
+.conteudo p:last-child {
+    margin: 0;
+}
+
+.conteudo .continue-lendo {
+    color: #000;
+    transition: all 0.5s ease;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.conteudo .continue-lendo:hover {
+    margin-left: 10px;
+}
+
+.post-info {
+    float: right;
+    font-size: 12px;
+    margin: -10px 0 15px;
+    text-transform: uppercase;
+}
+
+@media screen and (max-width: 960px) {
+    .header {
+        position: inherit;
+    }
+    .wrap {
+        width: 90%;
+        margin: 25px auto;
+    }
+    .sidebar {
+        width: 100%;
+        margin: 25px 0 0;
+        float: right;
+    }
+    .sidebar .widget {
+        padding: 5%;
+    }
+    .blog {
+        width: 90%;
+    }
+    .conteudo {
+        float: inherit;
+        margin: 0 auto 25px;
+        width: 101%;
+        border: 1px solid #dedede;
+        background: #fff;
+    }
+    .conteudo img {
+        max-width: 110%;
+        margin: 0 0 25px -5%;
+        min-width: 110%;
+    }
+    .conteudo .continue-lendo:hover {
+        margin-left: 0;
+    }
+}
+
+#frame-image {
+    /* 
+    CSS Untuk croping gambar / foto 
+
+    Disini Anda dapat menentukan lebar dan tinggi image
+    */
+    width: 100%;
+    max-width: 600px;
+    max-height: 400px;
+    height: auto;
+    overflow: hidden;
+    /* 
+    CSS Untuk mengatur posisi gambar 
+    Menjadikan frame / bingkai sebagai patokan koordinat left/top
+    */
+    position: relative;
+}
+
+.map-responsive {
+    overflow: hidden;
+    padding-bottom: 56.25%;
+    position: relative;
+    height: 0;
+}
+
+.map-responsive iframe {
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+
+#frame-image img {
+    /*
+    CSS Untuk croping gambar
+    Membatasi tinggi gambar, membiarkan width-nya auto
+    Bisa juga diganti jadi height: 320px jika tinggi gambar mau dipaksakan jadi 320px
+    */
+    max-height: 650px;
+    /* 
+    CSS Untuk mengatur posisi gambar 
+    Left/top berpatokan pada frame
+    Diisi dengan nilai minus untuk memposisikan keluar dari frame
+    karena frame overflow-nya dibuat jadi hidden
+    posisi yg keluar area frame jadi tidak terlihat
+
+    Disini Anda dapat mengatur bagian/posisi gambar yg mana yg akan ditampilkan
+    */
+    position: center;
+    left: -10px;
+    top: -86px;
+}
+
+@media screen and (max-width: 460px) {
+    .sidebar {
+        display: none
+    }
+    .post-info {
+        display: none;
+    }
+    .conteudo {
+        margin: 25px auto;
+    }
+    .conteudo img {
+        margin: -5% 0 25px -5%;
+    }
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: poppins;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+#testimonials {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+.testimonial-heading {
+    letter-spacing: 1px;
+    margin: 30px 0px;
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.testimonial-heading h1 {
+    font-size: 2.2rem;
+    font-weight: 500;
+    background-color: #202020;
+    color: #ffffff;
+    padding: 10px 20px;
+}
+
+.testimonial-heading span {
+    font-size: 1.3rem;
+    color: #252525;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.testimonial-box-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.testimonial-box {
+    width: 220px;
+    box-shadow: 2px 2px 30px rgba(126, 125, 125, 0.1);
+    background-color: #ffffff;
+    padding: 5px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.profile-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 10px;
+}
+
+.profile-img img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    -o-object-position: center;
+    object-position: center;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+}
+
+.name-user {
+    display: flex;
+    flex-direction: column;
+}
+
+.name-user strong {
+    color: #3d3d3d;
+    font-size: 1.1rem;
+    letter-spacing: 0.5px;
+}
+
+.name-user span {
+    color: #979797;
+    font-size: 0.8rem;
+}
+
+.reviews {
+    color: #f9d71c;
+}
+
+.box-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1px;
+}
+
+.client-comment p {
+    font-size: 0.9rem;
+    color: #4b4b4b;
+}
+
+.testimonial-box:hover {
+    transform: translateY(-10px);
+    transition: all ease 0.3s;
+}
+
+@media(max-width:1060px) {
+    .testimonial-box {
+        width: 45%;
+        padding: 10px;
+    }
+}
+
+@media(max-width:790px) {
+    .testimonial-box {
+        width: 100%;
+    }
+    .testimonial-heading h1 {
+        font-size: 1.4rem;
+    }
+}
+
+@media(max-width:340px) {
+    .box-top {
+        flex-wrap: wrap;
+        margin-bottom: 10px;
+    }
+    .reviews {
+        margin-top: 10px;
+    }
+}
+
+::-moz-selection {
+    color: #ffffff;
+    background-color: #252525;
+}
+
+::selection {
+    color: #ffffff;
+    background-color: #252525;
+}

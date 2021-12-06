@@ -41,4 +41,14 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function wisata(){
+        return $this->hasMany(Wisata::class, "User_id", "id");
+    }
+    public function rating(){
+        return $this->hasMany(Rating::class, "User_id", "id");
+    }
+    public function review(){
+        return $this->hasMany(Review::class, "User_id", "id");
+    }
 }
