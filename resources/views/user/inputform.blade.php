@@ -17,15 +17,15 @@
     <form class="form" action="{{(isset($data))?route('wisata.update', $data->Id_Wisata):route('wisata.store')}}" method="POST" enctype="multipart/form-data">
         @csrf
                 @if(isset($data))
-                @method('PUT')
+                  @method('PUT')
                 @endif
 
-       <div class="inputfield">
+      <div class="inputfield" data-error="ini error">
           <label>Nama Wisata</label>
           <input type="text" class="input" name = "Nama_Wisata" value="{{(isset($data))?$data->Nama_Wisata:old('Nama_Wisata')}}" >
-        </div>  
+      </div>  
 
-       <div class="inputfield">
+      <div class="inputfield">
           <label>Kategori</label>
           <div class="custom_select" >
             <select name ="Kategori" value="{{(isset($data))?$data->Kategori:old('Kategori')}}">
@@ -40,7 +40,7 @@
 
             </select>
           </div>
-       </div> 
+      </div> 
 
        <div class="inputfield">
           <label>Lokasi</label>

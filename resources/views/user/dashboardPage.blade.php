@@ -16,11 +16,28 @@
 </head>
 
 <body>
-
+    <nav class="navbar">
+        <!-- LOGO -->
+        <a href="/" class="logo">Digital <span>Destination</span></a>
+        <!-- NAVIGATION MENU -->
+            <ul class="nav-links">
+                    <!-- USING CHECKBOX HACK -->
+                
+                    <!-- NAVIGATION MENUS -->
+                    <div class="menu">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/">Service</a></li>
+                        <a class="logout" href="/logout">logout</a>
+                    </div>
+                    
+                   
+                    
+            </ul>
+    </nav>
 
     <div class="container">
         <div class="container-fluid mt-3">
-            <h1>Daftar Postingan</h1>
+            {{-- <h2>Daftar Postingan</h2> --}}
             
             <a href="{{route('wisata.create')}}"><button type="button" class="btn btn-primary float-right" >
                 Tambah
@@ -35,31 +52,31 @@
                             <table class="table user-list">
                                 <thead>
                                     <tr>
-                                        <th><span><h3>Foto</h3></span></th>
-                                        <th><span><h3>Nama Wisata</h3> </span></th>
-                                        <th><span><h3>Kabupaten</h3> </span></th>
-                                        <th><span><h3>aksi</h3> </span></th>
+                                        <th><span><h4>Foto</h4></span></th>
+                                        <th><span><h4>Nama Wisata</h4> </span></th>
+                                        <th><span><h4>Kabupaten</h4> </span></th>
+                                        <th><span><h4>aksi</h4> </span></th>
                                     </tr>
                                 </thead>
-                                <tbody>
-                                    <tr>
+                                <tbody >
+                                    <tr >
                                         @foreach($data as $datas)
-                                        <td>
+                                        <td style="background-color: #fff">
                                         
                                         <img src="{{ url('storage/'.$datas->Foto) }}" width = 100px alt="" />
                                         
                                         </td>
 
-                                        <td>
+                                        <td style="background-color: #fff">
                                             <h4>{{$datas->Nama_Wisata}}</h4>
                                         </td>
 
 
-                                        <td class="text-left">
+                                        <td class="text-left" style="background-color: #fff">
                                             <h4>{{$datas->Lokasi}}</h4>
                                         </td>
 
-                                    <td style="width: 20%;  display:flex;">
+                                    <td style="width: 20%;  display:flex; margin: 50px 25px; background-color: #fff">
                                     
                                             <a href="{{route('wisata.show', $datas->Id_Wisata)}}" class="table-link">
                                                 <span class="fa-stack">
@@ -74,12 +91,7 @@
                                                             <i class="fa fa-pencil fa-stack-1x fa-inverse"></i>
                                                 </span>
                                             </a>
-                                            <!-- <a href="#" class="table-link danger">
-                                                <span class="fa-stack">
-                                                    <i class="fa fa-square fa-stack-2x"></i>
-                                                    <i class="fa fa-trash-o fa-stack-1x fa-inverse"></i>
-                                                </span>
-                                            </a> -->
+                                            
 
                                             <form action="{{route('wisata.destroy', $datas->Id_Wisata)}}" method="POST">
                                                 @csrf
