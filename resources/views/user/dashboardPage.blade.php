@@ -17,10 +17,11 @@
 
 <body>
 
+
     <div class="container">
         <div class="container-fluid mt-3">
             <h1>Daftar Postingan</h1>
-
+            
             <a href="{{route('wisata.create')}}"><button type="button" class="btn btn-primary float-right" >
                 Tambah
               </button> </a>

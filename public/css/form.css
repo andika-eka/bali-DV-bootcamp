@@ -30,6 +30,7 @@ body {
 
 .wrapper .form {
   width: 100%;
+  
 }
 
 .wrapper .form .inputfield {
@@ -38,6 +39,11 @@ body {
   align-items: center;
 }
 
+.error-message p{
+  
+  color: red;
+  font-size: smaller;
+}
 .wrapper .form .inputfield label {
   width: 200px;
   color: #757575;

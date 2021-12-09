@@ -24,12 +24,16 @@
                 <div class="menu-wrapper">
                     <ul class="menu">
                         <li class="menu-item"><a href="#" class="menu-link active">Home</a></li>
-                        <li class="menu-item"><a href="#" class="menu-link">Services</a></li>
-                        <li class="menu-item"><a href="#" class="menu-link">Destination</a></li>
+                        <li class="menu-item"><a href="#service" class="menu-link">Services</a></li>
+                        <li class="menu-item"><a href="#konten" class="menu-link">Destination</a></li>
                         <!-- <li class="menu-item"><a href="#" class="menu-link">About us</a></li>
                         <li class="menu-item"><a href="#" class="menu-link">Contact</a></li> -->
                     </ul>
+                    @auth
+                    <a href="/wisata" class="btn-member">dashboard</a>
+                    @else
                     <a href="/login" class="btn-member">Login</a>
+                    @endauth
                 </div>
                 <div class="menu-toggle bx bxs-grid-alt">
                 </div>
@@ -54,7 +58,7 @@
     </header>
 
     <!-- Service Start -->
-    <section class="service">
+    <section class="service" id="service">
         <div class="container service-wrapper">
             <div class="row1">
                 <p class="label-service">What we serve</p>
@@ -109,7 +113,7 @@
 
     <!-- ini konten utama -->
     <!-- Produk start -->
-    <section class="produk">
+    <section class="produk" id="konten">
         <div class="container produk-wrapper">
             <div class="row1">
                 <div class="title-produk" data-aos="fade-right">
