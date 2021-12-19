@@ -1,18 +1,28 @@
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,800,700,600,300);
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Raleway:wght@500;600;700&display=swap%22");
+
+:root {
+    --main-color: #1f4590;
+    --second-color: #ffa451;
+    --body-color: #fff;
+
+    --main-font: "Open Sans", sans-serif;
+    --heading-font: "Raleway", sans-serif;
+}
+
 body {
     background: rgb(255, 255, 255);
     margin: 50;
-    font-family: 'Open Sans', sans-serif;
+    font-family: var(--main-font);
 }
 
 .wrap {
-    width: 1000px;
+    width: 95%;
     margin: 25px auto;
 }
 
 .sidebar {
     float: right;
-    width: 275px;
+    width: 28%;
 }
 
 .checked {
@@ -20,13 +30,12 @@ body {
 }
 
 .sidebar .widget {
-    padding: 25px;
+    padding: 20px;
     margin: 0 0 2px;
-    background: #fff;
+    background: rgb(255, 255, 255);
     border: 1px solid #dedede;
     box-shadow: 1px 1px 1px 0px rgba(204, 204, 204, 0.35);
-    padding: 20px;
-    margin-top: 25px;
+    margin-top: 30px;
     border-radius: 10px;
 }
 
@@ -43,26 +52,23 @@ body {
 }
 
 .conteudo {
-    width: 650px;
-    padding: 25px;
+    width: 850px;
+    padding: 10px;
     margin: 25px auto;
     background: #fff;
-    border: 1px solid #dedede;
-    box-shadow: 1px 1px 1px 0px rgba(204, 204, 204, 0.35);
-    border-radius: 10px;
 }
 
 .conteudo img {
-    min-width: 650px;
+    min-width: 850px;
     margin: 0 0 25px -25px;
-    max-width: 650px;
+    max-width: 850px;
 }
 
 .conteudo h1 {
     padding: 0;
     margin: 0 0 15px;
     font-weight: normal;
-    color: #666;
+    color: rgb(216, 104, 0);
     font-family: Georgia;
 }
 
@@ -93,13 +99,15 @@ body {
         position: inherit;
     }
     .wrap {
-        width: 90%;
+        width: 110%;
         margin: 25px auto;
     }
     .sidebar {
         width: 100%;
         margin: 25px 0 0;
         float: right;
+        padding-right: 60px;
+        padding-left: 10px;
     }
     .sidebar .widget {
         padding: 5%;
@@ -111,7 +119,6 @@ body {
         float: inherit;
         margin: 0 auto 25px;
         width: 101%;
-        border: 1px solid #dedede;
         background: #fff;
     }
     .conteudo img {
@@ -131,10 +138,11 @@ body {
     Disini Anda dapat menentukan lebar dan tinggi image
     */
     width: 100%;
-    max-width: 600px;
-    max-height: 400px;
+    max-width: 850px;
+    max-height: 650px;
     height: auto;
     overflow: hidden;
+
     /* 
     CSS Untuk mengatur posisi gambar 
     Menjadikan frame / bingkai sebagai patokan koordinat left/top
@@ -157,30 +165,9 @@ body {
     position: absolute;
 }
 
-#frame-image img {
-    /*
-    CSS Untuk croping gambar
-    Membatasi tinggi gambar, membiarkan width-nya auto
-    Bisa juga diganti jadi height: 320px jika tinggi gambar mau dipaksakan jadi 320px
-    */
-    max-height: 650px;
-    /* 
-    CSS Untuk mengatur posisi gambar 
-    Left/top berpatokan pada frame
-    Diisi dengan nilai minus untuk memposisikan keluar dari frame
-    karena frame overflow-nya dibuat jadi hidden
-    posisi yg keluar area frame jadi tidak terlihat
-
-    Disini Anda dapat mengatur bagian/posisi gambar yg mana yg akan ditampilkan
-    */
-    position: center;
-    left: -10px;
-    top: -86px;
-}
-
 @media screen and (max-width: 460px) {
     .sidebar {
-        display: none
+        display: none;
     }
     .post-info {
         display: none;
@@ -247,7 +234,7 @@ a {
 }
 
 .testimonial-box {
-    width: 220px;
+    width: 20px;
     box-shadow: 2px 2px 30px rgba(126, 125, 125, 0.1);
     background-color: #ffffff;
     padding: 5px;
@@ -256,8 +243,8 @@ a {
 }
 
 .profile-img {
-    width: 50px;
-    height: 50px;
+    width: 30px;
+    height: 30px;
     border-radius: 50%;
     overflow: hidden;
     margin-right: 10px;
@@ -314,14 +301,14 @@ a {
     transition: all ease 0.3s;
 }
 
-@media(max-width:1060px) {
+@media (max-width: 1060px) {
     .testimonial-box {
         width: 45%;
         padding: 10px;
     }
 }
 
-@media(max-width:790px) {
+@media (max-width: 790px) {
     .testimonial-box {
         width: 100%;
     }
@@ -330,7 +317,7 @@ a {
     }
 }
 
-@media(max-width:340px) {
+@media (max-width: 340px) {
     .box-top {
         flex-wrap: wrap;
         margin-bottom: 10px;
@@ -348,4 +335,202 @@ a {
 ::selection {
     color: #ffffff;
     background-color: #252525;
+}
+
+.container {
+    border: 2px solid rgb(240, 239, 239);
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 16px;
+    margin: 16px 0;
+}
+
+.container::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.container img {
+    float: left;
+    margin-right: 10px;
+    border-radius: 50%;
+}
+
+.container span {
+    color: #000000;
+    font-size: 20px;
+    margin-right: 80px;
+}
+
+@media (max-width: 500px) {
+    .container {
+        text-align: center;
+    }
+    .container img {
+        margin: auto;
+        float: none;
+        display: block;
+    }
+}
+
+.navbar .nav-wrapper {
+    position: relative;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 150px;
+}
+.nav-wrapper .menu-toggle {
+    display: none;
+}
+.nav-wrapper .logo {
+    font-size: 2.8rem;
+    font-family: var(--heading-font);
+    font-weight: 600;
+    color: var(--main-color);
+}
+.nav-wrapper .logo span {
+    font-size: 1.8rem;
+    color: var(--second-color);
+}
+.nav-wrapper .menu-wrapper {
+    display: flex;
+    gap: 50px;
+}
+.nav-wrapper .menu-wrapper .menu {
+    display: flex;
+    align-items: center;
+    gap: 70px;
+}
+.menu-wrapper .menu .menu-link {
+    font-size: 1.25rem;
+    color: var(--main-color);
+    font-family: var(--heading-font);
+    font-weight: 500;
+}
+.menu-wrapper .menu .menu-link.active {
+    font-weight: 700;
+    color: var(--second-color);
+}
+.menu-wrapper .btn-member {
+    font-family: var(--heading-font);
+    color: #fff;
+    font-weight: 600;
+    background-color: var(--second-color);
+    padding: 25px 30px;
+    border-radius: 50px;
+}
+
+:root {
+    --main-color: #1f4590;
+    --second-color: #ffa451;
+    --body-color: #fff;
+
+    --main-font: "Open Sans", sans-serif;
+    --heading-font: "Raleway", sans-serif;
+}
+
+body {
+    background-color: var(--body-color);
+    font-family: var(--main-font);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+section {
+    margin-top: 200px;
+}
+
+.container {
+    max-width: 1500px;
+}
+
+body {
+    margin-top: 20px;
+}
+
+.container {
+    max-width: 1500px;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+h2 {
+    font-family: var(--heading-font);
+    font-weight: 500;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: var(--body-color);
+    color: #fff;
+}
+
+.navbar .logo {
+    font-size: 2.8rem;
+    font-family: var(--heading-font);
+    font-weight: 600;
+    color: var(--main-color);
+}
+
+.navbar .logo span {
+    font-size: 2.8rem;
+    color: var(--second-color);
+}
+
+.nav-links a {
+    color: #5c5c5c;
+}
+
+.nav-links .logout {
+    font-family: var(--main-font);
+    color: #fff;
+    font-weight: 400;
+    background-color: var(--second-color);
+    padding: 10px 15px;
+    border-radius: 50px;
+    border: none;
+}
+
+.nav-links a:hover {
+    color: #525151;
+}
+
+/* LOGO */
+.logo {
+    font-size: 32px;
+}
+
+/* NAVBAR MENU */
+.menu {
+    display: flex;
+    gap: 50px;
+    font-size: 18px;
+}
+
+.menu li:hover {
+    /* background-color: var(--main-color); */
+    border-radius: 5px;
+    transition: 0.3s ease;
+}
+
+.menu li {
+    padding: 5px 14px;
 }
